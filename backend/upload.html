@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      action="http://localhost:3000/api/auth/register"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input type="text" name="name" placeholder="Enter Name" required />
+      <input type="email" name="email" placeholder="Enter Email" required />
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter Password"
+        required
+      />
+      <input
+        type="text"
+        name="gender"
+        placeholder="Enter Gender (Male/Female)"
+        required
+      />
+      <input type="file" name="file" required />
+      <button type="submit">Upload</button>
+    </form>
+    <form
+      action="http://localhost:3000/api/user/67de95de1f37197fad83ea3e?_method=PUT"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input type="file" name="file" />
+      <button type="submit">update</button>
+    </form>
+    <form
+      action="http://localhost:3000/api/post/new?type=reel"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input type="text" name="caption" placeholder="Enter caption" required />
+
+      <input type="file" name="file" required />
+      <button type="submit">Upload</button>
+    </form>
+  </body>
+</html>
